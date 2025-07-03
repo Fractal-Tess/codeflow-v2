@@ -1,0 +1,38 @@
+{
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss",
+    "@ianvs/prettier-plugin-sort-imports"
+  ],
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "tabWidth": 2,
+  "printWidth": 80,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "jsxSingleQuote": false,
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "<THIRD_PARTY_MODULES>",
+    "astro:(.*)$",
+    "<TYPES>",
+    "",
+    "^@repo/(.*)$",
+    "<TYPES>^@repo/(.*)$",
+    "^@db/(.*)$",
+    "<TYPES>^@db/(.*)$",
+    "",
+    "^[\\$]",
+    "<TYPES>^[\\$]",
+    "^[./]"
+  ],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
+}

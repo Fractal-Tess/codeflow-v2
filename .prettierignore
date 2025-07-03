@@ -1,0 +1,31 @@
+# Astro
+.astro
+
+# Pocketbase
+pb
+
+# Build output
+dist
+
+# Node modules
+node_modules
+
+# Public
+public
+
+# README
+README.md 
+
+# Virtual environment
+venv
+.venv
+
+# DB
+supabase
+
+# Markdown
+*.md
+
+# Pocketbase typegen
+db/ai-data/src/types.ts
+db/early-bird/src/types.ts
