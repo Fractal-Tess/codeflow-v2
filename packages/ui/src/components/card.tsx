@@ -1,6 +1,7 @@
 import { cn } from '@workspace/ui/lib/utils';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { cva } from 'class-variance-authority';
 import * as React from 'react';
+import type { VariantProps } from 'class-variance-authority';
 
 const cardVariants = cva(
   'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm',
@@ -8,19 +9,20 @@ const cardVariants = cva(
     variants: {
       variant: {
         default: 'bg-card text-card-foreground border-border',
-        frosted: 'bg-white/10 backdrop-blur-xl border-white/20 shadow-2xl text-white',
-      },
+        frosted:
+          'bg-white/5 backdrop-blur-xl border-white/20 shadow-2xl text-white'
+      }
     },
     defaultVariants: {
-      variant: 'default',
-    },
+      variant: 'default'
+    }
   }
 );
 
-function Card({ 
-  className, 
+function Card({
+  className,
   variant,
-  ...props 
+  ...props
 }: React.ComponentProps<'div'> & VariantProps<typeof cardVariants>) {
   return (
     <div
